@@ -1,0 +1,8 @@
+prefix=/home/ishan/MRT_ws/devel
+
+Name: ass3_hardware
+Description: Description of ass3_hardware
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
