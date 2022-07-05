@@ -16,12 +16,24 @@ class Drive:
         axes = inp.axes
         buttons = inp.buttons
 
-        """TODO - INSERT YOUR CODE HERE
-        
-        Problem Statement: Insert Code here to make the rover move 
-        forwards, backwards, left, right according to input given
-        """
-        
+        if buttons[0]:
+            print("BACKWARD")
+            self.rightClaw.BackwardM1(127)
+            self.leftClaw.BackwardM1(127)
+        if buttons[1]:
+            print("RIGHT")
+            self.rightClaw.ForwardM1(127)
+            self.leftClaw.BackwardM1(127)
+            
+        if buttons[2]:
+            print("LEFT")
+            self.rightClaw.BackwardM1(127)
+            self.leftClaw.ForwardM1(127)
+
+        if buttons[3]:
+            print("FORWARD")
+            self.rightClaw.ForwardM1(127)
+            self.leftClaw.ForwardM1(127)
 
     def current_limiter(self):
         """BONUS: 
