@@ -36,11 +36,10 @@ class Drive:
             self.leftClaw.ForwardM1(127)
 
     def current_limiter(self):
-        """BONUS: 
-
-        Try to implement this function as well. It is a saftey feature. 
-        How would you decide the current threshold? - Please elaborate
-        """
+        cur1 = self.rightClaw.readCurrents()
+        cur2 = self.leftClaw.readCurrents()
+        if cur1 and cur2<13:
+            return True
         return False
                 
 
