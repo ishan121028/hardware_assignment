@@ -36,8 +36,8 @@ class Drive:
             self.leftClaw.ForwardM1(127)
 
     def current_limiter(self):
-        cur1 = self.rightClaw.readCurrents()
-        cur2 = self.leftClaw.readCurrents()
+        cur1 = self.rightClaw.GETCURRENT()
+        cur2 = self.leftClaw.GETCURRENT()
         if cur1 and cur2<13:
             return True
         return False
